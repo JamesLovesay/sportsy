@@ -16,7 +16,7 @@ The version of node required to run this app locally is v16.13.1. Later versions
 
 1 - You will need to fork and clone the repo with the command `git clone https://github.com/JamesLovesay/sportsy`.
 
-2 - Run npm install to install the required dependencies for the project.
+2 - Run `npm install` to install the required dependencies for the project.
 
 3 - Download and setup the Expo Go app on your mobile phone.
 
