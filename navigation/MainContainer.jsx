@@ -10,15 +10,15 @@ import { auth } from '../firebase';
 import GlobalStyles from '../constants/styles/GlobalStyles';
 
 // Screens
-import LoginScreen from '../screens/LoginScreen';
+import LoginScreen from '../screens/User Screens/LoginScreen';
 import LandingScreen from '../screens/LandingScreen';
 import HomeScreen from '../screens/HomeScreen';
-import FindEventsScreen from '../screens/FindEventsScreen';
-import MyEventsScreen from '../screens/MyEventsScreen';
-import CreateEventScreen from '../screens/CreateEventScreen';
-import UserProfileScreen from '../screens/UserProfileScreen';
-import RegisterScreen from '../screens/RegisterScreen';
-import ProfileEditScreen from '../screens/ProfileEditScreen';
+import FindEventsScreen from '../screens/eventScreens/FindEventsScreen';
+import MyEventsScreen from '../screens/eventScreens/MyEventsScreen';
+import CreateEventScreen from '../screens/eventScreens/CreateEventScreen';
+import UserProfileScreen from '../screens/User Screens/UserProfileScreen';
+import RegisterScreen from '../screens/User Screens/RegisterScreen';
+import ProfileEditScreen from '../screens/User Screens/ProfileEditScreen';
 import SingleEventScreen from '../screens/eventScreens/SingleEventScreen';
 
 // Screen names, will be used as text for the buttons

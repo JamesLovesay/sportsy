@@ -11,9 +11,9 @@ import {
   Image, ScrollView,
 } from 'react-native';
 import { doc, updateDoc } from 'firebase/firestore';
-import { UserContext } from '../contexts/UserContext';
-import GlobalStyles from '../constants/styles/GlobalStyles';
-import { auth, db } from '../firebase';
+import { UserContext } from '../../contexts/UserContext';
+import GlobalStyles from '../../constants/styles/GlobalStyles';
+import { auth, db } from '../../firebase';
 
 function ProfileEditScreen() {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);

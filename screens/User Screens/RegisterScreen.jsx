@@ -2,10 +2,9 @@ import {
   KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View,
 } from 'react-native';
 import React, { useState } from 'react';
-import { useNavigation } from '@react-navigation/core';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { setDoc, doc, Timestamp } from 'firebase/firestore';
-import { auth, db } from '../firebase';
+import { auth, db } from '../../firebase';
 
 export default function RegisterScreen() {
   const [email, setEmail] = useState('');

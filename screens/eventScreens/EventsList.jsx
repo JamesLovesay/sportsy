@@ -3,8 +3,8 @@ import {
 } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../firebase';
-import EventCardComponent from './eventScreens/EventCardComponent';
+import { db } from '../../firebase';
+import EventCardComponent from './EventCardComponent';
 
 export default function EventsList({ result, setResult }) {
   const eventsCollectionRef = collection(db, 'events');

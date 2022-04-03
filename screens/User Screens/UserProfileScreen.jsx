@@ -3,12 +3,12 @@ import React,{useState, useEffect, useContext} from 'react'
 import { StyleSheet, Text, TouchableOpacity, View,
   SafeAreaView,Image, ActivityIndicator } from 'react-native'
   import { getDoc, doc} from 'firebase/firestore';
-import { db, auth } from '../firebase';
-import { UserContext } from '../contexts/UserContext';
-import GlobalStyles from '../constants/styles/GlobalStyles'
+import { db, auth } from '../../firebase';
+import { UserContext } from '../../contexts/UserContext';
+import GlobalStyles from '../../constants/styles/GlobalStyles'
 
 const UserProfileScreen = () => {
-  const { loggedInUser,setLoggedInUser, userData, setUserData } = useContext(UserContext)
+  const { setLoggedInUser, userData, setUserData } = useContext(UserContext)
   const [isloading, setLoading] = useState(true);
   const navigation = useNavigation()
   const docRef = doc(db, "users", auth.currentUser.uid);

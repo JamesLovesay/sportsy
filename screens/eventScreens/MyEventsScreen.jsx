@@ -5,8 +5,8 @@ import {
 import {
   collection, query, where, getDocs,
 } from 'firebase/firestore';
-import { db, auth } from '../firebase';
-import EventCardComponent from './eventScreens/EventCardComponent';
+import { db, auth } from '../../firebase';
+import EventCardComponent from './EventCardComponent';
 
 export default function MyEventsScreen({ navigation }) {
   const [userCreatedEvents, setUserCreatedEvents] = useState([]);

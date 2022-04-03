@@ -17,9 +17,9 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import {
   serverTimestamp, addDoc, collection,
 } from 'firebase/firestore';
-import GlobalStyles from '../constants/styles/GlobalStyles';
-import { UserContext } from '../contexts/UserContext';
-import { auth, db } from '../firebase';
+import GlobalStyles from '../../constants/styles/GlobalStyles';
+import { UserContext } from '../../contexts/UserContext';
+import { auth, db } from '../../firebase';
 
 export default function CreateEventScreen() {
   const [modalVisible, setModalVisible] = useState(false);
