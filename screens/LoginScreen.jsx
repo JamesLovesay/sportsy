@@ -54,7 +54,6 @@ function LoginScreen() {
           secureTextEntry
         />
       </View>
-
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           onPress={handleLogin}

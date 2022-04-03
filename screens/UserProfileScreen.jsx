@@ -9,7 +9,6 @@ import GlobalStyles from '../constants/styles/GlobalStyles'
 
 const UserProfileScreen = () => {
   const { loggedInUser,setLoggedInUser, userData, setUserData } = useContext(UserContext)
-  // const [userData, setUserData] = useState(null);
   const [isloading, setLoading] = useState(true);
   const navigation = useNavigation()
   const docRef = doc(db, "users", auth.currentUser.uid);
@@ -21,7 +20,6 @@ const UserProfileScreen = () => {
         setUserData(userInfo.data())
         setLoading(false)
         return userInfo.data()
-
       }).then(data =>{
         setLoggedInUser(data)
       }).catch(error => alert(error.message))
@@ -50,9 +48,6 @@ const UserProfileScreen = () => {
   const navigateToEdit = ()=>{
     navigation.navigate("editProfile")
   }
-
-
-//---------------return ---------------------------
 
 if(userData !== null){
 
@@ -102,7 +97,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-
    button: {
     backgroundColor: '#63CDAB',
     width: '60%',

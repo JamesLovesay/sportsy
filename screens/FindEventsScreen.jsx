@@ -3,7 +3,6 @@ import {
   StyleSheet,
   View,
   Text,
-  FlatList,
 } from 'react-native';
 import {
   collection, getDocs, query, where,
@@ -12,8 +11,6 @@ import { db } from '../firebase';
 
 import Searchbar from './Searchbar';
 import EventsList from './EventsList';
-
-// import Header from './globalScreens/HeaderComponent';
 
 const eventsRef = collection(db, 'events');
 

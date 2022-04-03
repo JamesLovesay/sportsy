@@ -1,14 +1,11 @@
 import {
   KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View,
 } from 'react-native';
-import { Picker } from '@react-native-picker/picker';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/core';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { setDoc, doc, Timestamp } from 'firebase/firestore';
 import { auth, db } from '../firebase';
-
-const items = require('../globalVariables');
 
 export default function RegisterScreen() {
   const [email, setEmail] = useState('');
@@ -18,11 +15,6 @@ export default function RegisterScreen() {
   const [DOB, setDOB] = useState('');
   const [avatar, setAvatar] = useState('https://firebasestorage.googleapis.com/v0/b/sportsy-c79d8.appspot.com/o/sportsyDefaultPhoto.png?alt=media&token=b13b51bc-cd6d-4d2e-b442-a6547a4e2add');
   const [location, setLocation] = useState([]);
-
-  const navigation = useNavigation();
-
-  const preferredSports = [];
-
   const apiString = 'https://api.postcodes.io/postcodes';
   const FetchPostcode = (query) => fetch(`${apiString}/${query}`, {
     method: 'GET',
@@ -99,12 +91,6 @@ export default function RegisterScreen() {
           onChangeText={(text) => setDOB(text)}
           style={styles.input}
         />
-        {/* <TextInput
-          placeholder="Imge-Url"
-          value={avatar}
-          onChangeText={(text) => setAvatar(text)}
-          style={styles.input}
-        /> */}
         <TextInput
           placeholder="Post-Code"
           value={location}

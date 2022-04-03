@@ -13,10 +13,7 @@ import {
 import { doc, updateDoc } from 'firebase/firestore';
 import { UserContext } from '../contexts/UserContext';
 import GlobalStyles from '../constants/styles/GlobalStyles';
-
-// import ImagePicker from 'react-native-image-crop-picker';
 import { auth, db } from '../firebase';
-// import storage from '@react-native-firebase/storage';
 
 function ProfileEditScreen() {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
@@ -164,9 +161,7 @@ function ProfileEditScreen() {
             </TouchableOpacity>
           </View>
         </View>
-
       </ScrollView>
-
     </KeyboardAvoidingView>
   );
 }
@@ -225,8 +220,6 @@ const styles = StyleSheet.create({
     height: 150,
     width: 150,
     borderRadius: 75,
-
     marginTop: 10,
-
   },
 });

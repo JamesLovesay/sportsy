@@ -18,8 +18,6 @@ import {
   serverTimestamp, addDoc, collection,
 } from 'firebase/firestore';
 import GlobalStyles from '../constants/styles/GlobalStyles';
-// import CalendarPicker from 'react-native-calendar-picker';
-// import TimePicker from 'react-time-picker';
 import { UserContext } from '../contexts/UserContext';
 import { auth, db } from '../firebase';
 

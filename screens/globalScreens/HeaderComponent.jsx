@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View, Image, StyleSheet, Dimensions, Text,
+  View, Image, StyleSheet, Dimensions,
 } from 'react-native';
 
 const win = Dimensions.get('window');

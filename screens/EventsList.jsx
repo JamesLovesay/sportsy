@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
     height: 20,
   },
   eventContainer: {
-    // height: '100%',
     width: '90%',
   },
   cardOutline: {

@@ -9,16 +9,12 @@ import {
 import { db, auth } from '../firebase';
 import { UserContext } from '../contexts/UserContext';
 
-// import Header from './globalScreens/HeaderComponent';
-
 export default function HomeScreen({ navigation }) {
   const [eventsLocation, setEventsLocation] = useState();
   const [loading, setLoading] = useState(true);
   const eventsCollectionRef = collection(db, 'events');
   const docRef = doc(db, 'users', auth.currentUser.uid);
   const { setLoggedInUser, setUserData } = useContext(UserContext);
-
-  // const navigation = useNavigation();
 
   useEffect(() => {
     setLoading(true);

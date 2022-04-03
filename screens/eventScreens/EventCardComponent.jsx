@@ -1,4 +1,4 @@
-import { NavigationRouteContext, useNavigation } from '@react-navigation/core';
+import { useNavigation } from '@react-navigation/core';
 import React, { useContext } from 'react';
 import {
   View, Text, StyleSheet, FlatList, TouchableOpacity, Image,
@@ -86,14 +86,12 @@ export default function EventCardComponent(props) {
                 style={styles.viewEventText}
               >
                 View Event
-
               </Text>
             </TouchableOpacity>
           </View>
 
         </View>
       )}
-      // keyExtractor={(item, index) => index}
       showsVerticalScrollIndicator={false}
     />
   );
@@ -127,7 +125,6 @@ const styles = StyleSheet.create({
   },
   textInput: {
     flex: 1,
-    // marginTop: Platform.OS === 'ios' ? 0 : -12,
     paddingLeft: 10,
     color: '#333333',
   },
@@ -136,7 +133,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     padding: 5,
-    // justifyContent: 'center',
     alignItems: 'center',
   },
   postionRight: {

@@ -16,7 +16,6 @@ import {
 
   serverTimestamp, addDoc, collection, query, where, getDocs, orderBy, deleteDoc,
 } from 'firebase/firestore';
-// import { SafeAreaView } from 'react-native-safe-area-context';
 import MapView, { Marker, Circle } from 'react-native-maps';
 import SingleEventAttendees from './SingleEventAttendees';
 import { db, auth } from '../../firebase';
@@ -28,7 +27,6 @@ function SingleEventScreen({ route, navigation }) {
   const [postedComments, setPostedComments] = useState([]);
   const [attendees, setAttendees] = useState([]);
   const [loading, setLoading] = useState(true);
-  const timePosted = serverTimestamp();
   const [comment, setComment] = useState({
     comment: '', eventId: route.params.id, timePosted: serverTimestamp(), username: userData.username,
   });
@@ -433,7 +431,6 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     paddingHorizontal: 6,
     fontSize: 12,
-    // marginRight: '40%',
   },
   postionRight: {
     textAlign: 'right',
@@ -443,26 +440,16 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   spotsTaken: {
-    // textAlign: 'center',
-    // marginHorizontal: 35,
     padding: 5,
   },
   description: {
-    // textAlign: 'center',
     padding: 5,
   },
   eventDateAndTime: {
-    // fontFamily: 'Cochin',
-    // fontWeight: 'bold',
-    // fontSize: 12,
-    // padding: 10,
     marginBottom: 5,
     padding: 5,
-    // textAlign: 'center',
-    // marginHorizontal: 10,
   },
   attendeeLabel: {
-    // marginLeft: 25,
     marginTop: 15,
     marginBottom: 10,
     borderColor: '#5BD0AA',
@@ -546,23 +533,16 @@ const styles = StyleSheet.create({
     height: 200,
   },
   mapContainer: {
-    // justifyContent: 'center',
-    // alignItems: 'center',
     width: '90%',
     marginTop: 5,
-    // borderWidth: 1,
   },
   boldText: {
     fontWeight: 'bold',
-  },
-  item: {
-    // marginTop: 5,
   },
   commentCardFooter: {
     flex: 1,
     justifyContent: 'space-between',
     flexDirection: 'row',
-
   },
   time: {
     fontSize: 11,

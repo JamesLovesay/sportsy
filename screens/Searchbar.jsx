@@ -5,7 +5,6 @@ import {
   Text,
   TouchableOpacity,
   TextInput,
-  Button,
 } from 'react-native';
 
 export default function Searchbar({
@@ -70,10 +69,6 @@ export default function Searchbar({
         </TouchableOpacity>
 
       </View>
-      <View>
-        {/* <Button title="Reset Results" color="#008080" onPress={handleReset}>Submit</Button> */}
-
-      </View>
       {
                 error
                 && (
@@ -92,7 +87,6 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'center',
     flex: 1,
-
   },
   vwClear: {
     flex: 0.2,
@@ -100,16 +94,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textInput: {
-    // backgroundColor: 'green',
     flex: 1,
   },
-
   vwSearch: {
     flex: 0.2,
     justifyContent: 'center',
     alignItems: 'center',
     width: 40,
-    // backgroundColor: 'red'
   },
   searchContainer:
     {
@@ -120,12 +111,9 @@ const styles = StyleSheet.create({
       marginBottom: 5,
     },
   container: {
-    // height: 80,
     alignItems: 'center',
   },
   searchBtnContainer: {
-    // flex: 2,
-    // justifyContent: 'space-between',
     flexDirection: 'row',
     width: '90%',
   },
@@ -149,5 +137,4 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontSize: 16,
   },
-
 });
